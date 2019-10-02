@@ -36,3 +36,48 @@ var app = {
 };
 
 app.initialize();
+
+let currentPage = 0;
+
+$(".carousel").carousel({interval: false, duration: 200})
+
+$(".carousel").swipe({
+
+    swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+        if (direction == 'left') {$(this).carousel('next'); currentPage ++; currentPage = currentPage%6;}
+        if (direction == 'right') {$(this).carousel('prev'); currentPage --; currentPage = currentPage < 0 ? 4: currentPage%6;}
+        $(`#item${currentPage + 1}`).prop("checked", true);
+    },
+    allowPageScroll:"vertical"
+  
+  });
+
+$("#item1").click(function(){
+    $(".carousel").carousel(0);
+    currentPage = 0;
+});
+
+$("#item2").click(function(){
+    $(".carousel").carousel(1);
+    currentPage = 1;
+});
+
+$("#item3").click(function(){
+    $(".carousel").carousel(2);
+    currentPage = 2;
+});
+
+$("#item4").click(function(){
+    $(".carousel").carousel(3);
+    currentPage = 3;
+});
+
+$("#item5").click(function(){
+    $(".carousel").carousel(4);
+    currentPage = 4;
+});
+
+$("#item6").click(function(){
+    $(".carousel").carousel(5);
+    currentPage = 5;
+});
