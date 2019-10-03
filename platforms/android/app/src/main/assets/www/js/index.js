@@ -36,3 +36,36 @@ var app = {
 };
 
 app.initialize();
+
+$('.main-gallery').flickity({
+    contain: true,
+    on: {
+        change: function( index ) {
+            $(`#item${index +1}`).prop('checked', true);
+        }
+    }
+});
+
+$( "#item1" ).click(function() {
+    $('.main-gallery').flickity('select', 0, false, true);
+});
+
+$( "#item2" ).click(function() {
+    $('.main-gallery').flickity('select', 1, false, true);
+});
+
+$( "#item3" ).click(function() {
+    $('.main-gallery').flickity('select', 2, false, true);
+});
+
+$( "#item4" ).click(function() {
+    $('.main-gallery').flickity('select', 3, false, true);
+});
+
+$( "#item5" ).click(function() {
+    $('.main-gallery').flickity('select', 4, false, true);
+});
+
+$( "#item6" ).click(function() {
+    $('.main-gallery').flickity('select', 5, false, true);
+});
