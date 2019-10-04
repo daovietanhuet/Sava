@@ -283,13 +283,12 @@ ol.flickity-page-dots .dot{
 
 .horizontal-list {
     height: 80%;
-    width: 94%;
+    width: 94%
 }
 
 .horizontal-list-cell {
     height: 100%;
-    width: 37%;
-    border-radius: 2%;
+    border-radius: 4%;
     background: #84D2F6 /*remove*/
 }
 

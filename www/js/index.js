@@ -38,12 +38,12 @@ var app = {
 app.initialize();
 
 $(document).ready( function() {
-    var swiperH = new Swiper('.main-gallery', {
+    var swiperMain = new Swiper('.main-gallery', {
         direction: 'horizontal',
         spaceBetween: 0
     });
-    var swiperV = new Swiper('.ads', {
-        pagination: '.ads-pagination',
+    var swiperAds = new Swiper('.ads', {
+        pagination: '.swiper-pagination-ads',
         paginationClickable: true,
         direction: 'horizontal',
         spaceBetween: 50,
@@ -51,6 +51,7 @@ $(document).ready( function() {
     });
     var swiperList = new Swiper('.horizontal-list', {
         direction: 'horizontal',
+        slidesPerView: 2.5,
         spaceBetween: 20,
         nested: true
     });
