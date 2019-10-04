@@ -41,6 +41,8 @@ $('.main-gallery').flickity({
     contain: true,
     prevNextButtons: false,
     pageDots: false,
+    adaptiveHeight: true,
+    accessibility: false,
     on: {
         change: function( index ) {
             $(`#item${index +1}`).prop('checked', true);
@@ -72,19 +74,34 @@ $( "#item6" ).click(function() {
     $('.main-gallery').flickity('select', 5, false, true);
 });
 
+let insideFlickityConfig = {
+    dragStart: function() {
+        let $carousel = $('.main-gallery').flickity();
+        let flkty = $carousel.data('flickity');
+        flkty.options.draggable = false;
+        flkty.updateDraggable();
+    },
+    dragEnd: function() {
+        let $carousel = $('.main-gallery').flickity();
+        let flkty = $carousel.data('flickity');
+        flkty.options.draggable = true;
+        flkty.updateDraggable();
+    }
+}
+
 $('#ads').flickity({
     contain: true,
     prevNextButtons: false,
-    freeScrool: true,
     wrapAround: true,
     autoPlay: 1500,
     pauseAutoPlayOnHover: false,
-    on: {
-        dragStart: function() {
-            $('.main-gallery').flickity("destroy");
-        },
-        dragEnd: function() {
-            $('.main-gallery').flickity();
-        }
-    }
+    on: insideFlickityConfig
+})
+
+$('.horizontal-list').flickity({
+    contain: true,
+    prevNextButtons: false,
+    pageDots: false,
+    freeScrool: true,
+    on: insideFlickityConfig
 })

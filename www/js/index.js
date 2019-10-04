@@ -37,54 +37,21 @@ var app = {
 
 app.initialize();
 
-$('.main-gallery').flickity({
-    contain: true,
-    prevNextButtons: false,
-    pageDots: false,
-    on: {
-        change: function( index ) {
-            $(`#item${index +1}`).prop('checked', true);
-        }
-    }
+$(document).ready( function() {
+    var swiperH = new Swiper('.main-gallery', {
+        direction: 'horizontal',
+        spaceBetween: 0
+    });
+    var swiperV = new Swiper('.ads', {
+        pagination: '.ads-pagination',
+        paginationClickable: true,
+        direction: 'horizontal',
+        spaceBetween: 50,
+        nested: true
+    });
+    var swiperList = new Swiper('.horizontal-list', {
+        direction: 'horizontal',
+        spaceBetween: 20,
+        nested: true
+    });
 });
-
-$( "#item1" ).click(function() {
-    $('.main-gallery').flickity('select', 0, false, true);
-});
-
-$( "#item2" ).click(function() {
-    $('.main-gallery').flickity('select', 1, false, true);
-});
-
-$( "#item3" ).click(function() {
-    $('.main-gallery').flickity('select', 2, false, true);
-});
-
-$( "#item4" ).click(function() {
-    $('.main-gallery').flickity('select', 3, false, true);
-});
-
-$( "#item5" ).click(function() {
-    $('.main-gallery').flickity('select', 4, false, true);
-});
-
-$( "#item6" ).click(function() {
-    $('.main-gallery').flickity('select', 5, false, true);
-});
-
-$('#ads').flickity({
-    contain: true,
-    prevNextButtons: false,
-    freeScrool: true,
-    wrapAround: true,
-    autoPlay: 1500,
-    pauseAutoPlayOnHover: false,
-    on: {
-        dragStart: function() {
-            $('.main-gallery').flickity("destroy");
-        },
-        dragEnd: function() {
-            $('.main-gallery').flickity();
-        }
-    }
-})

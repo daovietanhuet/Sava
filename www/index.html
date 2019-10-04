@@ -6,7 +6,7 @@
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
         <link rel="stylesheet" type="text/css" href="css/index.css">
-        <link rel="stylesheet" type="text/css" href="css/flickity.min.css">
+        <link rel="stylesheet" type="text/css" href="css/swiper.min.css">
         <script type="text/javascript" src="js/vue.min.js"></script>
         <title>Sava</title>
     </head>
@@ -22,64 +22,60 @@
                 </div>
             </div>
 
-            <div id="app-content" class="main-gallery">
-                <div class="gallery-cell">
-                    <div class="onerd" id="ads">
-                        <div class="ads-cell"></div>
-                        <div class="ads-cell"></div>
-                        <div class="ads-cell"></div>
+            <div id="app-content" class="swiper-container main-gallery">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide gallery-cell">
+                        <div class="onerd ads swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide ads-cell"></div>
+                                <div class="swiper-slide ads-cell"></div>
+                                <div class="swiper-slide ads-cell"></div>
+                                <div class="swiper-slide ads-cell"></div>
+                                <div class="swiper-slide ads-cell"></div>
+                            </div>
+                            <div class="swiper-pagination ads-pagination"></div>
+                        </div>
+                        <div class="onerd">
+                            <div class="swiper-container horizontal-list">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide horizontal-list-cell"></div>
+                                    <div class="swiper-slide horizontal-list-cell"></div>
+                                    <div class="swiper-slide horizontal-list-cell"></div>
+                                    <div class="swiper-slide horizontal-list-cell"></div>
+                                    <div class="swiper-slide horizontal-list-cell"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="onerd">
+                            <div class="swiper-container horizontal-list">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide horizontal-list-cell"></div>
+                                    <div class="swiper-slide horizontal-list-cell"></div>
+                                    <div class="swiper-slide horizontal-list-cell"></div>
+                                    <div class="swiper-slide horizontal-list-cell"></div>
+                                    <div class="swiper-slide horizontal-list-cell"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="onerd"></div>
-                    <div class="onerd"></div>
-                    <div class="onerd"></div>
-                    <div class="onerd"></div>
-                    <div class="onerd"></div>
-                    <div class="end"></div>
-                </div>
-                <div class="gallery-cell">
+                    <div class="swiper-slide gallery-cell">
+                        <div class="onerd"></div>
+                        <div class="onerd"></div>
+                    </div>
+                    <div class="swiper-slide gallery-cell">
                         <div class="onerd"></div>
                         <div class="onerd"></div>
                         <div class="onerd"></div>
+                    </div>
+                    <div class="swiper-slide gallery-cell">
                         <div class="onerd"></div>
-                        <div class="onerd"></div>
-                        <div class="onerd"></div>
-                        <div class="end"></div>
-                </div>
-                <div class="gallery-cell">
-                        <div class="onerd"></div>
-                        <div class="onerd"></div>
-                        <div class="onerd"></div>
-                        <div class="onerd"></div>
-                        <div class="onerd"></div>
-                        <div class="onerd"></div>
-                        <div class="end"></div>
-                </div>
-                <div class="gallery-cell">
-                        <div class="onerd"></div>
-                        <div class="onerd"></div>
-                        <div class="onerd"></div>
-                        <div class="onerd"></div>
-                        <div class="onerd"></div>
-                        <div class="onerd"></div>
-                        <div class="end"></div>
-                </div>  
-                <div class="gallery-cell">
-                        <div class="onerd"></div>
-                        <div class="onerd"></div>
-                        <div class="onerd"></div>
-                        <div class="onerd"></div>
-                        <div class="onerd"></div>
-                        <div class="onerd"></div>
-                        <div class="end"></div>
-                </div>
-                <div class="gallery-cell">
-                        <div class="onerd"></div>
-                        <div class="onerd"></div>
-                        <div class="onerd"></div>
-                        <div class="onerd"></div>
-                        <div class="onerd"></div>
-                        <div class="onerd"></div>
-                        <div class="end"></div>
+                    </div>
+                    <div class="swiper-slide gallery-cell">
+                            <div class="onerd"></div>
+                    </div>
+                    <div class="swiper-slide gallery-cell">
+                            <div class="onerd"></div>
+                    </div>
                 </div>
             </div>
 
@@ -124,8 +120,9 @@
 
 
         <script type="text/javascript" src="js/jquery.min.js"></script>
-        <script type="text/javascript" src="js/flickity.min.js"></script>
+        <script type="text/javascript" src="js/swiper.min.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/indexCRUD.js"></script>
     </body>
 </html>
